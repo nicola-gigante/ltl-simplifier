@@ -24,6 +24,7 @@
 
 # Compiled Dynamic libraries
 *.so
+!libowl.so
 *.dylib
 *.dll
 
