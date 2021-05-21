@@ -97,7 +97,9 @@ OwlFormula simplify_formula(JVM owl, OwlFormula formula) {
     size_t nvars = cli::inputs.size() + cli::outputs.size();
     auto statuses = std::make_unique<int[]>(nvars);
 
-    return ltl_formula_simplify(owl, formula, nvars, statuses.get(), nvars);
+    return ltl_formula_simplify(
+        owl, formula, cli::inputs.size(), statuses.get(), nvars
+    );
 }
 
 int main(int argc, char **argv) 
